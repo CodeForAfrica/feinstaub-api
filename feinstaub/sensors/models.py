@@ -176,7 +176,7 @@ class SensorLocation(TimeStampedModel):
     class Meta:
         ordering = ['location', ]
         indexes = [
-            models.Index(fields=['country', 'city']),
+            models.Index(fields=['country'], name='country_idx'),
             models.Index(fields=['city'], name='city_idx'),
         ]
 
